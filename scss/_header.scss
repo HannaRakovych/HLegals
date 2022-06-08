@@ -1,11 +1,17 @@
 /*1440px, 1280px, 992px, 648px, 576px - breakpoints, на которых меняется верстка в bootstrap*/
 
+.site-main-page, .site-team-entry-page, .site-aboutUs-page, .site-services-page, .site-publications-EP  {
+    .container {
+        padding: 0;
+    }
+}
+
+
+
 .navbar {
-    margin: 50px 0 60px;
-    /*position: absolute;*/
-    /*top: 0;
-    width: 100%;*/
-    
+    margin: 0 0 60px;
+
+    padding-top: 50px;
 
     @media (max-width: 576px) {
         margin: 0 0 60px;
@@ -14,13 +20,21 @@
 
     &-dark {
         .navbar-nav{
+
             @media (max-width:992px) {
                 margin-left: -8px;
             }
 
+            @media (max-width:768px) {
+               margin-top: 25px; 
+               margin-left: 0 !important;
+            } 
+            
+
             @media (max-width: 576px) {
                 margin-left: 0;
             }
+
             .nav-link {
                 color: white;
                 font-weight: 700;
@@ -32,11 +46,57 @@
                 &:hover {
                     color: darken(white, 10%);
                 }
+
+                &-active {
+                    color: $main-color;  
+                    font-weight: 900;
+                    display: block;
+                    padding: 7px 8px;
+                    font-size: 17px;
+                }
+
+                &-blue {
+                    color: $secondary-color;
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 700;
+                    /*padding-right: 15px;*/
+                    margin-right: 15px;
+
+                    &-active {
+                    color: $main-color;
+                    font-size: 16px;
+                    font-weight: 700;
+                    
+
+                    &-padding {
+                        color: $main-color;
+                        font-size: 16px;
+                        font-weight: 700;
+                        margin-right: 15px;
+                    }
+                    /*margin-right: 15px;*/
+                    }
+
+                    &-padding {
+                        color: $secondary-color;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 700;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                    }
+
+            
+                }
+
             }
+
         }
 
+
         .navbar-toggler {
-            order: 2;
+            order: 4;
             border: 0;
     
             &-icon {
@@ -47,7 +107,7 @@
 
    
 
-    &-brand {
+    &-brand, &-brand-navy {
         order: 1;
         margin-bottom: -70px;
 
@@ -56,8 +116,45 @@
         }
     }
 
-    &-collapse {
+    &-slash-services {
+        order: 2;
+        margin: -65px 0 0 133px;
+
+        @media (max-width:768px) {
+            margin: -80px 0 0 133px;  
+        }
+    }
+
+    &-slash-services-pub {
+        order: 2;
+        margin: -50px 0 0 133px;
+    }
+
+    .page-services {
         order: 3;
+        font-size: 36px;
+        font-weight: 400;
+        color: white;
+        margin-top: -65px;
+
+        @media (max-width:768px) {
+            margin-left: 160px;
+            margin-top: -53px;
+        }
+    }
+
+    .page-publications {
+        order: 3;
+        font-size: 36px;
+        font-weight: 400;
+        color: $navy-color;
+        margin-top: -51px;
+    }
+
+    
+
+    &-collapse {
+        order: 5;
     }
 
     &-lang, &-address, &-tel {
@@ -83,6 +180,25 @@
             color: darken(white, 10%);
         }
     }
+
+    &-lang-grey, &-address-grey, &-tel-grey {
+        &:after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background-color: #E6E6F0;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 6px;
+            transform: translateY(-2px);
+            
+
+            @media (max-width: 576px) {
+                display: none;;
+            }
+        }
+    }
+    
 
     &-address, &-fb {
         @media (max-width: 576px) {
@@ -127,6 +243,20 @@
         }
 
     }
+
+    &-address-grey {
+        text-decoration: none;
+        color: $grey-color;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    &-tel-grey {
+        text-decoration: none;
+        color: $grey-color;
+        font-size: 16px;
+        font-weight: 700;
+    }
 }
 
 .navbar-main-logo {
@@ -137,7 +267,7 @@
 
 
 
-.navbar-top {
+.navbar-top, .navbar-top-grey {
     order: 2;
     display: flex;
     width: 100%;
@@ -156,4 +286,35 @@
         margin: 0 -12px 15px;
         width: calc(100% + 26px);
     }
+
+
 }
+
+.page-publications {
+    order: 3;
+}
+
+.navbar-lang-grey-item {
+    font-size: 12px;
+    font-weight: 700;
+    color: $grey-color;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding-right: 14px;
+}
+
+.navbar-lang-white-item {
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding: 5px 7px;
+    border-radius: 8px;
+    /*margin-right: 14px;*/
+        &.active {
+            background-color: $main-color;
+        }
+}
+
+
