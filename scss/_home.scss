@@ -374,25 +374,17 @@
     gap: 30px;
     padding: 0 60px;
 
-    @media (max-width:375px) {
+    
+    @media (max-width:768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    @media (max-width:376px) {
         display: flex;
         flex-direction: column;
     }
-
-   /* @media (max-width:768px) {
-        display: grid;
-        grid-template-areas: "card-1 card-2"
-        "card-3 card-3";
-        grid-template-rows: 514px 388px;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .card-1, .card-2 {
-        @media (max-width:768px) {
-            width: 309px;
-            height: 514px;
-        }
-    }*/
 
     
     
@@ -426,13 +418,29 @@
     background-color: $lightgrey-color;
     padding: 0 60px 30px; 
 
+    @media (max-width:375px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
     .separator {
         padding: 30px 0;
+
+        @media (max-width:375px) {
+            max-width: 100%;
+        }
     }
     
     .site-footer-inner {
         display: flex;
         justify-content: space-between;
+
+
+        @media (max-width:375px) {
+            flex-direction: column;
+        }
+
 
         .address, .address-map {
             text-decoration: none;
@@ -443,12 +451,20 @@
             color: $secondary-color;
             font-size: 12px;
             font-weight: 700;
+
+            @media (max-width:375px) {
+                order: 2;
+            }
         }
 
         .address {
             font-size: 16px;
             font-weight: 400;
             color: $navy-color;
+
+            @media (max-width:375px) {
+                order: 1;
+            }
 
             &::after {
                 content: "";
@@ -468,9 +484,17 @@
         color: $grey-color;
         font-size: 16px;
         font-weight: 400;
+
+        @media (max-width:375px) {
+            order: 6;
+        }
     }
 
     .footer-fb {
+
+        @media (max-width:375px) {
+            order: 3;
+        }
 
             &::after {
                 content: "";
@@ -490,6 +514,10 @@
         font-weight: 700;
         text-decoration: none;
 
+        @media (max-width:375px) {
+            order: 4;
+        }
+
         &::after {
             content: "";
             width: 6px;
@@ -507,6 +535,10 @@
         font-size: 16px;
         font-weight: 700;
         text-decoration: none;
+
+        @media (max-width:375px) {
+            order: 5;
+        }
     }
 }
 
@@ -726,10 +758,6 @@
         margin: 30px 0 0;
     }
 
-    /*.separator-public-page {
-        margin: 30px 0;
-    }*/
-
     .social-media-icons {
         margin-top: 30px;
     }
@@ -782,7 +810,18 @@
 .lightgrey-sect {
     .gradient-phrase {
         margin-bottom: -32px;
+
+        @media (max-width:375px) {
+            font-size: 30px;
+        }
     }
+    
+    .container{
+        @media (max-width:375px) {
+            margin: 0 15px;
+        }
+    }
+
 }
 
 //Publications page// 
@@ -835,14 +874,28 @@
 .publications-section {
     margin-top: 72px;
 
+
     .container-cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
         padding: 0 60px;
+
+        @media (max-width:768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width:375px) {
+            grid-template-columns: 1fr;
+            padding: 0 30px;
+        }
+
         
         .card {
             width: 420px;
+
+            @media (max-width:768px) {
+                width: 309px;
+            }    
     
             &-title {
                 color: $secondary-color;
@@ -863,6 +916,12 @@
                 font-size: 14px;
                 font-weight: 400;
             }
+        }
+
+        .separator {
+            @media (max-width:768px) {
+               max-width: 100%;
+            }  
         }
     }
 
