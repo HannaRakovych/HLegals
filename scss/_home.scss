@@ -418,14 +418,22 @@
     background-color: $lightgrey-color;
     padding: 0 60px 30px; 
 
+    @media (max-width:768px) {
+        padding: 0 60px 80px;
+    }
+
     @media (max-width:375px) {
-        display: flex;
+        /*display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: center;*/
     }
 
     .separator {
         padding: 30px 0;
+
+        @media (max-width:768px) {
+            max-width: 100%;
+        }
 
         @media (max-width:375px) {
             max-width: 100%;
@@ -436,9 +444,13 @@
         display: flex;
         justify-content: space-between;
 
+        @media (max-width:768px) {
+            margin-left: 85px;
+        }
+
 
         @media (max-width:375px) {
-            flex-direction: column;
+            /*flex-direction: column;*/
         }
 
 
@@ -451,10 +463,6 @@
             color: $secondary-color;
             font-size: 12px;
             font-weight: 700;
-
-            @media (max-width:375px) {
-                order: 2;
-            }
         }
 
         .address {
@@ -462,10 +470,6 @@
             font-weight: 400;
             color: $navy-color;
 
-            @media (max-width:375px) {
-                order: 1;
-            }
-
             &::after {
                 content: "";
                 width: 6px;
@@ -475,9 +479,20 @@
                 display: inline-block;
                 margin: 0 10px;
                 transform: translateY(-2px);
+
+                @media (max-width:375px) {
+                    background-color: $lightgrey-color;
+                }
             }
         }
         
+    }
+
+    .site-footer-item3 {
+
+        @media (max-width:768px) {
+            margin-left: 81px;
+        }
     }
 
     .rights {
@@ -485,16 +500,12 @@
         font-size: 16px;
         font-weight: 400;
 
-        @media (max-width:375px) {
-            order: 6;
+        @media(max-width:768px) {
+            transform: translate(-220px, 100px);
         }
     }
 
     .footer-fb {
-
-        @media (max-width:375px) {
-            order: 3;
-        }
 
             &::after {
                 content: "";
@@ -505,6 +516,10 @@
                 display: inline-block;
                 margin: 0 10px;
                 transform: translateY(-2px);
+
+                @media (max-width:375px) {
+                    background-color: $lightgrey-color;
+                }
             }
     }
 
@@ -513,10 +528,6 @@
         font-size: 16px;
         font-weight: 700;
         text-decoration: none;
-
-        @media (max-width:375px) {
-            order: 4;
-        }
 
         &::after {
             content: "";
@@ -527,6 +538,10 @@
             display: inline-block;
             margin: 0 10px;
             transform: translateY(-2px);
+
+            @media (max-width:375px) {
+                background-color: $lightgrey-color;
+            }
         }
     }
 
@@ -535,10 +550,6 @@
         font-size: 16px;
         font-weight: 700;
         text-decoration: none;
-
-        @media (max-width:375px) {
-            order: 5;
-        }
     }
 }
 
@@ -551,6 +562,11 @@
     top: 0;
     left: 0;
     background-color: #6f6f92;
+
+    @media (max-width:375px) {
+        width: 100vw;
+        height: 100vh;
+    }
 }
 
 .popup-dialog {
@@ -645,6 +661,10 @@
 
     .gradient-phrase{
         margin: 50px 0 28px;
+
+        @media (max-width:375px) {
+            font-size: 30px;
+        }
     }
 
     .btn {
@@ -670,6 +690,16 @@
     padding-bottom: 12px;
     max-width: 1080px;
     margin: 0 auto;
+
+    @media (max-width:375px) {
+        margin: 0 30px;
+    }
+}
+
+.services-separator {
+    @media (max-width:375px) {
+        width: 80%;
+    }
 }
 
 .services-info {
@@ -682,6 +712,10 @@
         padding: 30px 0;
         text-align: left;
         color: white;
+
+        @media (max-width:375px) {
+            margin-left: 30px;
+        }
     }
 }
 
@@ -694,6 +728,13 @@
     font-weight: 400;
     align-items: flex-start;
     padding-left: 13px;
+
+    @media (max-width:375px) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
 
 .services-info-inner::before {
@@ -714,6 +755,13 @@
 
 .site-page-services-content {
     padding: 0 0 0 36px;
+
+    .gradient-phrase {
+        @media (max-width:375px) {
+            font-size: 30px;
+        }
+    }
+
 }
 
 // Publications entry page // 
@@ -784,6 +832,13 @@
 
     .item {
         margin-left: 10px;
+    }
+}
+
+.main-image-publications-page {
+
+    @media (max-width:768px) {
+        max-width: 100%;
     }
 }
 
@@ -1092,10 +1147,29 @@
 
         .left-sidebar {
             margin: 0 60px 0 108px;
+
+            @media (max-width:768px) {
+                margin-left: 24px;
+            }
+
+            img {
+                margin-left: -35px;
+            }
+
         }
 
         .right-sidebar {
             padding-right: 120px;
+
+            @media (max-width:768px) {
+                padding-right: 0;
+            }
+
+            .separator {
+                img {
+                    transform: translate(-460px, 370px);
+                }
+            }
 
             .gradient-phrase {
                 font-size: 38px;
@@ -1103,6 +1177,10 @@
 
             .employee-info {
                 display: flex;
+
+                @media (max-width:768px) {
+                    flex-direction: column;
+                }
 
                 .job-title, .email {
 
@@ -1115,6 +1193,10 @@
                         display: inline-block;
                         margin: 0 10px;
                         transform: translateY(-2px);
+
+                        @media (max-width:768px) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -1139,6 +1221,16 @@
                 text-transform: uppercase;
                 margin: 30px 0 15px;
                 
+        }
+        
+    }
+
+    .info-block-768px {
+        @media (max-width:768px) {
+            transform: translate(-550px, 400px);
+            margin-bottom: 400px;
+            margin-left: 90px;
+            width: 708px;
         }
     }
 }
@@ -1177,15 +1269,40 @@
 
 // About Us// 
 
+.site-aboutUs-page {
+    .container{
+        @media(min-width: 768px) {
+            margin-left: 15px;
+        }
+    }
+}
+
 .aboutUs-page-content-top {
 
     .container {
         display: grid;
+
+        @media (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin-left: 60px;
+        }
+
+        @media (max-width:375px) {
+           
+            margin: -90px 30px 0 30px;
+            padding-right: 60px;
+        }
         
         grid-template-columns: 1.4fr 60px 1fr;
 
         .separator {
             padding-left: 28px;
+
+            @media (max-width:768px) {
+                display: none;
+            }
         }
 
         padding-bottom: 60px;
@@ -1195,31 +1312,61 @@
     .left-sidebar {
         padding-left: 70px;
         font-size: 19px;
+
+        @media (max-width:768px) {
+            padding-left: 0;
+        }
+
+        .gradient-phrase {
+
+            @media (max-width:375px) {
+                font-size: 30px;
+            }
+        }
     }
 
     .right-sidebar {
 
         margin-right: 180px;
+
         .sign {
             transform: translate(-10px, -3px);
         }
 
         .gradient-phrase {
-            margin-bottom: 10px;
-            font-size: 36px;
+
+            @media (max-width:375px) {
+                font-size: 30px;
+                margin: 0;
+            }
         }
 
         .text {
             margin-bottom: 20px;
             margin-left: -10px;
+
+            @media (max-width:375px) {
+                width: 280px;
+            }
         }
 
 
         .symbols {
             display: flex;
         }
+
+        @media (max-width:768px) {
+            margin-left: 35px;
+        }
     }
     
+}
+
+.team-picture {
+
+    @media (max-width:768px) {
+        max-width: 100%;
+    }
 }
 
 .site-aboutUs-bottom {
@@ -1229,19 +1376,40 @@
         grid-template-columns: 1.25fr 1fr;
         gap: 60px;
 
+        @media (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
         .left-sidebar{
             padding-left: 68px;
             margin: 60px 0;
             font-size: 19px;
+
+            @media (max-width:768px) {
+                padding-left: 24px;
+                margin-bottom: 30px;
+            }
         }
         
         .right-sidebar {
             margin: 60px 0 60px;
             padding-right: 140px;
 
+            @media (max-width:768px) {
+                padding-right: 0;
+                margin: 0;
+            }
+
             .gradient-phrase {
                 padding-left: 10px;
                 margin-top: -8px;
+
+                @media (max-width:768px) {
+                    padding-left: 24px;
+                    margin-bottom: 60px;
+                }
             }
         }
        
