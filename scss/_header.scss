@@ -10,12 +10,15 @@
 
 .navbar {
     margin: 0 0 60px;
-
     padding-top: 50px;
 
     @media (max-width: 576px) {
         margin: 0 0 60px;
         padding-top: 0;
+    }
+
+    @media (max-width: 375px) {
+        margin: 0;
     }
 
     &-dark {
@@ -26,7 +29,7 @@
             }
 
             @media (max-width:768px) {
-               margin-top: 25px; 
+            //    margin-top: 25px; 
                margin-left: 0 !important;
             } 
             
@@ -34,6 +37,7 @@
             @media (max-width: 576px) {
                 margin-left: 0;
             }
+
 
             .nav-link {
                 color: white;
@@ -103,7 +107,7 @@
                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
             }
 
-            @media (max-width:375px) {
+            @media (max-width:768px) {
                 margin-top: -65px;
             }
         }
@@ -200,7 +204,7 @@
         order: 5;
 
         @media (max-width:768px){
-            margin-top: 30px;
+            margin-top: 50px;
         }
     }
 
@@ -355,8 +359,13 @@
             display: none;
         }
     }
+}
 
-
+.navbar-top-grey {
+    @media (max-width: 375px) {
+        background-color: $lightgrey-color;
+    }
+    
 }
 
 .page-publications {
